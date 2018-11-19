@@ -1,0 +1,24 @@
+<form (ngSubmit)="onSubmit()">
+
+  <div class="col-lg-6 form-group">
+
+
+    <input name="Name" placeholder="Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nom'" class="common-input mb-20 form-control" required="" type="text" [(ngModel)]="user.nom"><br>
+
+    <input name="Last Name" placeholder="Last Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Prenom'" class="common-input mb-20 form-control" required="" type="text" [(ngModel)]="user.prenom"> <br>
+    <input name="mail" placeholder="E-mail" onfocus="this.placeholder = ''" onblur="this.placeholder = 'E-mail'" class="common-input mb-20 form-control" required="" type="text" [(ngModel)]="user.email"><br>
+    <input name="Login" placeholder="Login" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Login'" class="common-input mb-20 form-control" required="" type="text" [(ngModel)]="user.login"> <br>
+    <input name="Telephone" placeholder="phone" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Telephone '" class="common-input mb-20 form-control" required="" type="number" [(ngModel)]="user.phone"> <br>
+    <input name="password" placeholder="Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Password'" class="common-input mb-20 form-control" required="" type="password" [(ngModel)]="user.password"> <br>
+
+    <select class="common-input mb-20 form-control"  (change)="onRoleSelect($event)">
+      <option  value="Proffesseur" > Professeur</option>
+      <option  value="Etudiant">Etudiant</option>
+    </select>
+
+
+    <input type="submit" value="Save" class="primary-btn">
+
+  </div>
+
+</form>

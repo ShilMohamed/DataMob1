@@ -1,0 +1,25 @@
+<p>
+
+<form (ngSubmit)="loginUser()">
+
+
+  <div class="col-lg-6 form-group">
+    <input name="login" placeholder="Login" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Login'" class="common-input mb-20 form-control" required="" type="text" [(ngModel)]="auth.login">
+
+    <input name="password" placeholder="Enter Your Password" onfocus="this.placeholder = ''" onblur="this.placeholder = 'nter Your Password'" class="common-input mb-20 form-control" required="" type="password" [(ngModel)]="auth.password">
+
+  </div>
+
+
+
+  <!--  <a href="#" class="primary-btn">Become a Member</a> <-->
+  <input type="submit" value="login" class="primary-btn">
+  <br>
+  <div>{{error}}</div>
+
+  <a  (click)="ToUserForm()" class="primary-btn">Inscrivez vous !</a>
+  <a   (click)="MDPoublie()" class="primary-btn" >Mot de Passe oublier ?</a>
+  <!--  <button (click)="loginUser($event)" > Login</button> -->
+
+
+</form>
